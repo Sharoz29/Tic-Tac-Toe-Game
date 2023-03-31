@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --yellow: rgb(241, 179, 6);
+  --background: rgb(44, 101, 155);
+  --winning-block: rgb(9, 50, 112);
+}
+body {
+  background-color: var(--background);
+  color: var(--yellow);
+  font-family: cursive;
+}
+h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.container {
+  padding: 40px;
+  height: 900px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#gameboard {
+  display: flex;
+  flex-flow: row wrap;
+  width: 600px;
+  height: 600px;
+  margin-top: 50px;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid var(--yellow);
+  border-bottom: 2px solid var(--yellow);
+  width: 200px;
+  height: 200px;
+  font-size: 5rem;
+}
+.box:nth-child(3n) {
+  border-right: none;
+}
+.box:nth-child(6) ~ .box {
+  border-bottom: none;
+}
+#restartbtn {
+  display: block;
+  background-color: var(--yellow);
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: cursive;
+  border-radius: 50px;
+  border: none;
+}
+#restartbtn:hover {
+  background-color: rgb(220, 56, 8);
+}
+.winning-block {
+  background-color: var(--winning-block);
+}
